@@ -1,0 +1,20 @@
+
+#webcamLiveStreamDisplay  {
+  border-radius: 20px;
+  padding: 5px;
+}
+#moistMeterIMG.rotate90 #image {
+  transform: rotate(90deg) translateY(-100%);
+  -webkit-transform: rotate(90deg) translateY(-100%);
+  -ms-transform: rotate(90deg) translateY(-100%);
+}
+#moistMeterIMG.rotate180 #image {
+  transform: rotate(180deg) translate(-100%, -100%);
+  -webkit-transform: rotate(180deg) translate(-100%, -100%);
+  -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+#moistMeterIMG.rotate270 #image {
+  transform: rotate(270deg) translateX(-100%);
+  -webkit-transform: rotate(270deg) translateX(-100%);
+  -ms-transform: rotate(270deg) translateX(-100%);
+}
