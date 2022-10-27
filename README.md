@@ -1,5 +1,6 @@
 Introducing ApexBox. 
 
+<img src="https://github.com/bartektenDev/ApexBox/blob/main/images/apexboxicon.PNG" data-canonical-src="https://github.com/bartektenDev/ApexBox/blob/main/images/apexboxicon.PNG" width="200" height="330" />
 The first software designed to improve you quality of life with your mailbox. 
 
 Not much info I can say, but I can show you the code of this smart mailbox I've been working on.
