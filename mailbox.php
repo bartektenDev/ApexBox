@@ -239,7 +239,7 @@ if ($postedPassword != $MailBoxPassword) {
               <div class="card" >
                 <div class="card-image">
                   <img id="webcamLiveStreamDisplay" alt="Live Stream will display here." align="center" style="-webkit-user-select: none;min-wdith:80%;min-height:30%;" src="https://thumbs.dreamstime.com/b/person-hands-taking-letters-view-inside-mailbox-close-up-silver-57967345.jpg"  height="30%"/>
-                  <span class="card-title"><img align="left" src="./images/reddot.gif" width="12px" style="max-width:12px;margin-top:13px;"/>
+                  
                   <font color="#fff">MailCam</font></span>
                 </div>
                 <div align="center" class="card-action">
