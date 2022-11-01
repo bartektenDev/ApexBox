@@ -40,8 +40,6 @@ if ($postedPassword != $MailBoxPassword) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-
-
     <font size="4">
         
         <h2 style="text-align:center;">Login</h2>
@@ -64,15 +62,13 @@ if ($postedPassword != $MailBoxPassword) {
                                                                         pattern="[0-9]*"
                                                                         type="password" /></p>
             <p style="text-align:center;max-width:300px;">
-            <!-- <button class="btn-large" type="submit" name="Submit" value="Login">Login
-                <i class="material-icons right">send</i>
-              </button> -->
+           
               <button data-v-78a4c752="" modifier="large" type="submit" value="Login" class="button-margin button button--large">Login</button>
             </p>
         </form>
     </font>
 
-    <a style="margin-left:60px; margin-bottom: 10px;">ver 1.0.30</a>
+    <a style="margin-left:60px; margin-bottom: 10px;">ver 1.0.35</a>
 
     <p>
 
@@ -231,93 +227,107 @@ if ($postedPassword != $MailBoxPassword) {
       <?php
         }
       ?>
-            
-          </div>
+        
+    </div>
 
           <p></p>
+    
+                <div class="card" >
+      
+                      <div class="card-content black-text">
+                        <!--<span class="card-title">ApexBox</span>
+                          <p></p> -->
+                          <div class="card-image">
+                            <img id="mailStatusIMG" alt="Mail_Status_Icon" align="center" style="-webkit-user-select: none;min-wdith:80%;min-height:30%;" src="https://media4.giphy.com/media/QaNHwuBjNLJkecumD5/giphy.gif?cid=6c09b9522fkmjm97tul5x3s8yzl79jm39jtishtfxac8s2sg&rid=giphy.gif&ct=s"  height="140px" width="180px"/>
+                            </div>
+                      </div>
+                    </div>
+                <p></p>
 
               <div class="card" >
-                <div class="card-image">
-                  <img id="webcamLiveStreamDisplay" alt="Live Stream will display here." align="center" style="-webkit-user-select: none;min-wdith:80%;min-height:30%;" src="https://thumbs.dreamstime.com/b/person-hands-taking-letters-view-inside-mailbox-close-up-silver-57967345.jpg"  height="30%"/>
+                
+                <div class="card-content black-text">
+                  <span class="card-title">MailCam</span>
+                    <p></p>
+                    <div class="card-image">
+                      <img id="webcamLiveStreamDisplay" alt="Live Stream will display here." align="center" style="-webkit-user-select: none;" src="https://thumbs.dreamstime.com/b/person-hands-taking-letters-view-inside-mailbox-close-up-silver-57967345.jpg" />
+                      
                   
-                  <font color="#fff">MailCam</font></span>
                 </div>
+                
                 <div align="center" class="card-action">
                   <!-- <a href="fullscreenStream.html">Fullscreen</a><br></br> -->
-                  <!-- <a class="btn-floating btn-large waves-effect waves-light white" onclick="activateLock();"><img src="./images/lockedpad.png" width="100%" /><i class="material-icons">fanon</i></a>&nbsp;
-                  <a class="btn-floating btn-large waves-effect waves-light white" onclick="activateUnlock();"><img src="./images/unlockedpad.png" width="100%" /><i class="material-icons">fanoff</i></a>&nbsp;
-                  <a class="btn-floating btn-large waves-effect waves-light white" onclick="activateLight();"><img src="./images/lighticon.png" height="100%" /><i class="material-icons">growlighton</i></a>&nbsp;
-                  <a class="btn-floating btn-large waves-effect waves-light white" onclick="disableLight();"><img src="./images/disablelight.png" height="100%" /><i class="material-icons">growlightoff</i></a>&nbsp; -->
+                  <a class="btn-floating btn-large waves-effect waves-light white" onclick="activateLock();"><img src="./images/padlocked.png" width="100%" /><i class="material-icons">fanon</i></a>&nbsp;
+                  <a class="btn-floating btn-large waves-effect waves-light white" onclick="activateUnlock();"><img src="./images/padunlocked.png" width="100%" /><i class="material-icons">fanoff</i></a>&nbsp;
+                  
                   <!-- <button class="fab fab--material"><img src="images/padlocked.png" width="60%" onclick="activateLock();"/></button>
                   <button class="fab fab--material"><img src="images/padunlocked.png" width="60%" onclick="activateUnlock();"/></button> -->
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input">
-                    <div class="checkbox__checkmark"></div>
-                    Unlocked
-                  </label>
-
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input" checked="checked">
-                    <div class="checkbox__checkmark"></div>
-                    Locked
-                  </label>
+                  
+                  </div>
                 </div>
               </div>
           <p></p>
 
           <div class="card" id="boxDetailsWindow">
-          <li class="list-item">
-              <div class="list-item__center">
-                Outside Lighting
-              </div>
-              <div class="list-item__right">
-                <label class="switch">
-                  <input type="checkbox" class="switch__input" checked>
-                  <div class="switch__toggle">
-                    <div class="switch__handle"></div>
-                  </div>
-                </label>
-              </div>
-            </li>
-            <li class="list-item">
-              <div class="list-item__center">
-                Interior Lighting
-              </div>
-              <div class="list-item__right">
-                <label class="switch">
-                  <input type="checkbox" class="switch__input">
-                  <div class="switch__toggle">
-                    <div class="switch__handle"></div>
-                  </div>
-                </label>
-              </div>
-            </li>
-            <li class="list-item">
-              <div class="list-item__center">
-                Lock after first interaction
-              </div>
-              <div class="list-item__right">
-                <label class="switch">
-                  <input type="checkbox" class="switch__input">
-                  <div class="switch__toggle">
-                    <div class="switch__handle"></div>
-                  </div>
-                </label>
-              </div>
-            </li>
+            <div class="card-content black-text">
+              <span class="card-title">Controls</span><p></p>
+          
+                    <li class="list-item">
+                      <div class="list-item__center">
+                        Outside Lighting
+                      </div>
+                      <div class="list-item__right">
+                        <label class="switch">
+                          <input type="checkbox" class="switch__input" checked>
+                          <div class="switch__toggle">
+                            <div class="switch__handle"></div>
+                          </div>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <div class="list-item__center">
+                        Interior Lighting
+                      </div>
+                      <div class="list-item__right">
+                        <label class="switch">
+                          <input type="checkbox" class="switch__input">
+                          <div class="switch__toggle">
+                            <div class="switch__handle"></div>
+                          </div>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <div class="list-item__center">
+                        Lock after first interaction
+                      </div>
+                      <div class="list-item__right">
+                        <label class="switch">
+                          <input type="checkbox" class="switch__input">
+                          <div class="switch__toggle">
+                            <div class="switch__handle"></div>
+                          </div>
+                        </label>
+                      </div>
+                    </li>
+                </div>
             </div>
           </div>
         <div class="card" id="boxDetailsWindow">
+            <div class="card-content black-text">
+            <span class="card-title">Weather Forecast</span><p></p>
     
-        <div class="tomorrow"
-           data-location-id="126002"
-           data-language="EN"
-           data-unit-system="IMPERIAL"
-           data-skin="light"
-           data-widget-type="upcoming"
-           style="padding-bottom:22px;position:relative;">
-          </a>
-        </div>
+                <div class="tomorrow"
+                   data-location-id="126002"
+                   data-language="EN"
+                   data-unit-system="IMPERIAL"
+                   data-skin="light"
+                   data-widget-type="upcoming"
+                   style="padding-bottom:22px;position:relative;">
+                  </a>
+                </div>
+            </div>
           </div>
           
           <div class="card" id="boxDetailsWindow">
@@ -326,13 +336,13 @@ if ($postedPassword != $MailBoxPassword) {
               <p></p>
               <div align="center">
                 More data will be programmed here
-            </div>
+              </div>
             </div>
           </div>
 
           <p></p>
 
-          <div align="center">ver 1.0.30</div>
+          <div align="center">ver 1.0.35</div>
 
         </div>
       </div>

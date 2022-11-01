@@ -298,7 +298,7 @@ if ("password" == $password) {
       <p></p>
 
       <div align="center" class="animated fadeIn delay-1s">
-        ver 1.0.20
+        ver 1.0.35
       </div>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
