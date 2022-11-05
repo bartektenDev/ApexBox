@@ -22,20 +22,20 @@ if ($postedPassword != $MailBoxPassword) {
 
   <html>
     <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="css/onsen-css-components-patched.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-  
-      <link rel="stylesheet" href="./css/animate.css">
-      <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"/>
-
-      <link rel="shortcut icon" href="https://docs.google.com/uc?export=download&id=1XNGPjIfDBdAtnlecVzkS50dP5JgiN4Nz"/>
-      <link rel="apple-touch-icon" sizes="180x180" href="./images/earthbegin.ico"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="./css/onsenui.css">
+    <link rel="stylesheet" href="./css/onsen-css-components-patched.min.css">
+    <script src="./js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"/>
+    <link rel="shortcut icon" href="https://docs.google.com/uc?export=download&id=1XNGPjIfDBdAtnlecVzkS50dP5JgiN4Nz"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/earthbegin.ico"/>
+    
 <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -53,7 +53,7 @@ if ($postedPassword != $MailBoxPassword) {
 
             <img style="
                 max-width:300px;"
-                src="https://www.freeiconspng.com/uploads/mail-box-icon-13.png" />
+                src="./images/main_mailboxicon.png" />
             <p></p>
 
             <label for="txtpassword">Password (0-9):</label>
@@ -68,7 +68,7 @@ if ($postedPassword != $MailBoxPassword) {
         </form>
     </font>
 
-    <a style="margin-left:60px; margin-bottom: 10px;">ver 1.0.35</a>
+    <a style="margin-left:60px; margin-bottom: 10px;">ver 1.0.40</a>
 
     <p>
 
@@ -85,15 +85,15 @@ if ($postedPassword != $MailBoxPassword) {
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <link href="css/style.css" rel="stylesheet" type="text/css">
+      <link href="./css/style.css" rel="stylesheet" type="text/css">
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="css/onsen-css-components-patched.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="./css/onsenui.css">
+      <link rel="stylesheet" href="./css/onsen-css-components-patched.min.css">
+      <script src="./js/onsenui.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="./css/animate.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"/>
       <link rel="shortcut icon" href="https://docs.google.com/uc?export=download&id=1XNGPjIfDBdAtnlecVzkS50dP5JgiN4Nz"/>
@@ -229,8 +229,6 @@ if ($postedPassword != $MailBoxPassword) {
       ?>
         
     </div>
-
-          <p></p>
     
                 <div class="card" >
       
@@ -238,7 +236,7 @@ if ($postedPassword != $MailBoxPassword) {
                         <!--<span class="card-title">ApexBox</span>
                           <p></p> -->
                           <div class="card-image">
-                            <img id="mailStatusIMG" alt="Mail_Status_Icon" align="center" style="-webkit-user-select: none;min-wdith:80%;min-height:30%;" src="https://media4.giphy.com/media/QaNHwuBjNLJkecumD5/giphy.gif?cid=6c09b9522fkmjm97tul5x3s8yzl79jm39jtishtfxac8s2sg&rid=giphy.gif&ct=s"  height="140px" width="180px"/>
+                            <img id="mailStatusIMG" alt="Mail_Status_Icon" align="center" style="-webkit-user-select: none;min-wdith:80%;min-height:30%;" src="./images/ygm_icon.gif"  height="140px" width="180px"/>
                             </div>
                       </div>
                     </div>
@@ -248,9 +246,8 @@ if ($postedPassword != $MailBoxPassword) {
                 
                 <div class="card-content black-text">
                   <span class="card-title">MailCam</span>
-                    <p></p>
                     <div class="card-image">
-                      <img id="webcamLiveStreamDisplay" alt="Live Stream will display here." align="center" style="-webkit-user-select: none;" src="https://thumbs.dreamstime.com/b/person-hands-taking-letters-view-inside-mailbox-close-up-silver-57967345.jpg" />
+                      <img id="webcamLiveStreamDisplay" alt="Live Stream will display here." align="center" style="-webkit-user-select: none;" src="./images/preview_mailcampic.jpeg" />
                       
                   
                 </div>
@@ -266,7 +263,7 @@ if ($postedPassword != $MailBoxPassword) {
                   </div>
                 </div>
               </div>
-          <p></p>
+          
 
           <div class="card" id="boxDetailsWindow">
             <div class="card-content black-text">
@@ -342,7 +339,7 @@ if ($postedPassword != $MailBoxPassword) {
 
           <p></p>
 
-          <div align="center">ver 1.0.35</div>
+          <div align="center">ver 1.0.40</div>
 
         </div>
       </div>

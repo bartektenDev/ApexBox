@@ -8,13 +8,19 @@ if ("password" == $password) {
 <!DOCTYPE html>
   <html>
     <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="css/onsen-css-components-patched.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="./css/onsenui.css">
+    <link rel="stylesheet" href="./css/onsen-css-components-patched.min.css">
+    <script src="./js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"/>
+    <link rel="shortcut icon" href="https://docs.google.com/uc?export=download&id=1XNGPjIfDBdAtnlecVzkS50dP5JgiN4Nz"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/earthbegin.ico"/>
     
     
     <script type="text/javascript" src="jquery.min.js"></script>
@@ -236,48 +242,70 @@ if ("password" == $password) {
                     ?>
                   </td>
                 </tr>
-                <!-- Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                  <li><a href="#" onclick="#">Turn OFF</a></li>
-                  <li><a href="#!">1:00 am</a></li>
-                  <li><a href="#!">2:00 am</a></li>
-                  <li><a href="#!">3:00 am</a></li>
-                  <li><a href="#!">4:00 am</a></li>
-                  <li><a href="#!">5:00 am</a></li>
-                  <li><a href="#!">6:00 am</a></li>
-                  <li><a href="#!">7:00 am</a></li>
-                  <li><a href="#!">8:00 am</a></li>
-                  <li><a href="#!">9:00 am</a></li>
-                  <li><a href="#!">10:00 am</a></li>
-                  <li><a href="#!">11:00 am</a></li>
-                  <li><a href="#!">12:00 pm</a></li>
-                  <li><a href="#!">1:00 pm</a></li>
-                  <li><a href="#!">2:00 pm</a></li>
-                  <li><a href="#!">3:00 pm</a></li>
-                  <li><a href="#!">4:00 pm</a></li>
-                  <li><a href="#!">5:00 pm</a></li>
-                  <li><a href="#!">6:00 pm</a></li>
-                  <li><a href="#!">7:00 pm</a></li>
-                  <li><a href="#!">8:00 pm</a></li>
-                  <li><a href="#!">9:00 pm</a></li>
-                  <li><a href="#!">10:00 pm</a></li>
-                  <li><a href="#!">11:00 pm</a></li>
-                  <li><a href="#!">12:00 pm</a></li>
-                </ul>
-                <ul id='dropdown2' class='dropdown-content'>
-                  <li><a href="#!">water</a></li>
-                  <li><a href="#!">light</a></li>
-                </ul>
-              </tbody>
-            </table>
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown1' class='dropdown-content'>
+                      <li><a href="#" onclick="#">Turn OFF</a></li>
+                      <li><a href="#!">1:00 am</a></li>
+                      <li><a href="#!">2:00 am</a></li>
+                      <li><a href="#!">3:00 am</a></li>
+                      <li><a href="#!">4:00 am</a></li>
+                      <li><a href="#!">5:00 am</a></li>
+                      <li><a href="#!">6:00 am</a></li>
+                      <li><a href="#!">7:00 am</a></li>
+                      <li><a href="#!">8:00 am</a></li>
+                      <li><a href="#!">9:00 am</a></li>
+                      <li><a href="#!">10:00 am</a></li>
+                      <li><a href="#!">11:00 am</a></li>
+                      <li><a href="#!">12:00 pm</a></li>
+                      <li><a href="#!">1:00 pm</a></li>
+                      <li><a href="#!">2:00 pm</a></li>
+                      <li><a href="#!">3:00 pm</a></li>
+                      <li><a href="#!">4:00 pm</a></li>
+                      <li><a href="#!">5:00 pm</a></li>
+                      <li><a href="#!">6:00 pm</a></li>
+                      <li><a href="#!">7:00 pm</a></li>
+                      <li><a href="#!">8:00 pm</a></li>
+                      <li><a href="#!">9:00 pm</a></li>
+                      <li><a href="#!">10:00 pm</a></li>
+                      <li><a href="#!">11:00 pm</a></li>
+                      <li><a href="#!">12:00 pm</a></li>
+                    </ul>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
-          
+        </div>
+      </div>
+    
+    <div class="row">
+        <div align="center" style="margin:auto;max-width:1200px;">
+          <div class="card">
+            <div class="card-content black-text">
+            <form name="input" action="saveemail.php">
+            <span class="card-title">Your e-mail to notify</span>
+              <input id="emailaddressToNotify" />
+                <button  modifier="large" type="submit" class="button-margin button button--large">Save</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-        
+    
+    <div class="row">
+        <div align="center" style="margin:auto;max-width:1200px;">
+          <div class="card">
+            <div class="card-content black-text">
+            <form name="input" action="setup_apex.php">
+            <span class="card-title">Setup Page</span>
+                <button  modifier="large" type="submit" class="button-margin button button--large">Launch</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
         <div class="row">
             <div align="center" style="margin:auto;max-width:1200px;">
@@ -298,7 +326,7 @@ if ("password" == $password) {
       <p></p>
 
       <div align="center" class="animated fadeIn delay-1s">
-        ver 1.0.35
+        ver 1.0.40
       </div>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
