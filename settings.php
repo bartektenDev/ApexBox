@@ -10,17 +10,25 @@ if ("password" == $password) {
     <head>
     <link href="./css/style.css" rel="stylesheet" type="text/css">
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"
+media="screen,projection"/>
     <link rel="stylesheet" href="./css/onsenui.css">
-    <link rel="stylesheet" href="./css/onsen-css-components-patched.min.css">
+    <link rel="stylesheet"
+href="./css/onsen-css-components-patched.min.css">
+    <script src="./js/onsenui.js"></script>
     <script src="./js/onsenui.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/animate.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"/>
-    <link rel="shortcut icon" href="https://docs.google.com/uc?export=download&id=1XNGPjIfDBdAtnlecVzkS50dP5JgiN4Nz"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/earthbegin.ico"/>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"/>
+    <link rel="shortcut icon"
+href="https://docs.google.com/uc?export=download&id=1XNGPjIfDBdAtnlecVzkS50dP5JgiN4Nz"/>
+    <link rel="apple-touch-icon" sizes="180x180"
+href="./images/earthbegin.ico"/>
     
     
     <script type="text/javascript" src="jquery.min.js"></script>

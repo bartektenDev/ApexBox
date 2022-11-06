@@ -13,11 +13,12 @@ if ("password" == $password) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"
 media="screen,projection"/>
     <link rel="stylesheet" href="./css/onsenui.css">
     <link rel="stylesheet"
 href="./css/onsen-css-components-patched.min.css">
+    <script src="./js/onsenui.js"></script>
     <script src="./js/onsenui.min.js"></script>
     <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,17 +30,55 @@ href="https://docs.google.com/uc?export=download&id=1XNGPjIfDBdAtnlecVzkS50dP5Jg
     <link rel="apple-touch-icon" sizes="180x180"
 href="./images/earthbegin.ico"/>
     
-    
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript">
-    function turnOFFSun() {
-        alert('<?php echo "test"?>');
+            
+    var enterWifiPass = function(itemNum) {
+        //user selected X item, lets pass the item number before we submit data
+        var dialog = document.getElementById('my-alert-dialog'+itemNum);
+
+        if (dialog) {
+          dialog.show();
+        } else {
+          ons.createElement('alert-dialog'+itemNum+'.html', { append: true })
+            .then(function(dialog) {
+              dialog.show();
+            });
+        }
+      };
+
+      var hideAlertDialog = function() {
+        document
+          .getElementById('my-alert-dialog'+itemNum)
+          .hide();
+      };
+
+      var notify = function() {
+        ons.notification.alert('This dialog was created with ons.notification');
+      };
+    
+
+    </script>
+    <script type="text/javascript">
+    function connectToWifi(wifiListItemNumber) {
         
-        $.get("settings.php");
-        return false;
+        var convertedSelectedItem = parseFloat(wifiListItemNumber);
+        
+        var selectedWifiSSID = String(document.getElementsByClassName("list-item__center")[convertedSelectedItem].innerHTML);
+        var selectedWifiPASS = String(document.getElementById("wifiPASS").value);
+
+        var data = {
+                    wifi_ssid: selectedWifiSSID,
+                    wifi_pass: selectedWifiPASS
+                };
+
+        $.post("tryWifi.php", data);
+        
+        location.reload();
+        
     }
     </script>
-  
+    
       <link rel="stylesheet" href="./css/animate.css">
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
       <link rel="icon"
@@ -119,7 +158,7 @@ translateX(-105%);">
       <p></p><br></br>
     
     <div align="center" class="animated fadeIn delay-1s">
-      <img src="https://static.vecteezy.com/system/resources/previews/002/290/601/original/wifi-isolated-icon-black-flat-free-vector.jpg" width="150px" height="150px" />
+      <img src="./images/loadingwifi.gif" width="240px" height="150px" />
     </div>
 
       <div align="center" class="animated fadeIn delay-1s">
@@ -133,27 +172,55 @@ translateX(-105%);">
     <div align="center" class="animated fadeIn delay-2s" style="margin-top:100px;">
       
     <ul class="list" style="max-width:300px;">
+        
     
         <!-- LIST WIFI NETWORKS -->
             <?php
               $handle = fopen("./python_scripts/logs/scannedWifiSSID.txt", "r");
               if ($handle) {
+                  $itemcount = 0;
                   while (($line = fgets($handle)) !== false) {
-                      echo '<li class="list-item list-item--tappable" onclick="enterWifiPass()"><div class="list-item__center">', $line , '</div></li>';
+                      echo '<li class="list-item list-item--tappable" onclick="enterWifiPass(',$itemcount,')"><div class="list-item__center" id="wifiSSID" name=”wifiSSID”>', $line , '</div></li>';
+                      
+                      echo '<template id="alert-dialog',$itemcount,'.html">';
+                      echo '<ons-alert-dialog id="my-alert-dialog',$itemcount,'" modifier="rowfooter">';
+                      echo '<div class="alert-dialog-title">Enter Password</div>';
+                      echo '<div class="alert-dialog-content">';
+                      echo '<input type="password" id="wifiPASS" value="" />';
+                      echo '</div>';
+                      echo '<div class="alert-dialog-footer">';
+                      echo '<ons-alert-dialog-button onclick="hideAlertDialog(',$itemcount,')">Cancel</ons-alert-dialog-button>';
+                      echo '<ons-alert-dialog-button onclick="connectToWifi(',$itemcount,')">Connect</ons-alert-dialog-button>';
+                      echo '</div>';
+                      echo '</ons-alert-dialog>';
+                      echo '</template>';
+                      $itemcount = $itemcount + 1;
                   }
-
                   fclose($handle);
+                  
+                  
+
               }
             ?>
+            
         </ul>
+    
+    
+    
     </div>
+    
+    
+    
+    
+    
+    
 
       <script
 src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript"
-src="js/javascript_bater.js"></script>
+src="./js/javascript_bater.js"></script>
 
       <script
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

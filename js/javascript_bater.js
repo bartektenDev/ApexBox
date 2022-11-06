@@ -1,35 +1,6 @@
-#
-#
-# WRITTEN BY BART TARASEWICZ
-#
-# JAVASCRIPT CODE
-#
 
-function enterWifiPass()
-{
-    var createAlertDialog = function() {
-      var dialog = document.getElementById('my-alert-dialog');
 
-      if (dialog) {
-        dialog.show();
-      } else {
-        ons.createElement('alert-dialog1.html', { append: true })
-          .then(function(dialog) {
-            dialog.show();
-          });
-      }
-    };
 
-    var hideAlertDialog = function() {
-      document
-        .getElementById('my-alert-dialog')
-        .hide();
-    };
-
-    var notify = function() {
-      ons.notification.alert('This dialog was created with ons.notification');
-    };
-}
 
 function readIP()
 {
@@ -96,9 +67,3 @@ function attemptReconnection() {
   earthBoxPreviousIP = window.location.hostname + ":" + window.location.port;
   document.location.href = "http://" + earthBoxPreviousIP + "/index.php";
 }
-
-
-
-
-
-
