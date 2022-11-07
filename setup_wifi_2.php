@@ -1,15 +1,8 @@
 <?php
 
-//run the wifi scan script
-exec("sudo rm -f /var/www/html/ApexBox/python_scripts/logs/scannedWifiSSID.txt");
-exec("sudo bash /var/www/html/ApexBox/python_scripts/scanWifi.sh");
-
-//sleep(1);
-
 $password = "password";
 
 if ("password" == $password) {
-    
 
 ?>
 <!DOCTYPE html>
@@ -39,9 +32,11 @@ href="./images/earthbegin.ico"/>
     
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript">
-            
+    //global variables
+
     var enterWifiPass = function(itemNum) {
         //user selected X item, lets pass the item number before we submit data
+ 
         var dialog = document.getElementById('my-alert-dialog'+itemNum);
 
         if (dialog) {
@@ -65,25 +60,6 @@ href="./images/earthbegin.ico"/>
       };
     
 
-    </script>
-    <script type="text/javascript">
-    function connectToWifi(wifiListItemNumber) {
-        
-        var convertedSelectedItem = parseFloat(wifiListItemNumber);
-        
-        var selectedWifiSSID = String(document.getElementsByClassName("list-item__center")[convertedSelectedItem].innerHTML);
-        var selectedWifiPASS = String(document.getElementById("wifiPASS").value);
-
-        var data = {
-                    wifi_ssid: selectedWifiSSID,
-                    wifi_pass: selectedWifiPASS
-                };
-
-        $.post("tryWifi.php", data);
-        location.href = "./setup_wifi_2.php";
-
-        
-    }
     </script>
     
       <link rel="stylesheet" href="./css/animate.css">
@@ -165,7 +141,7 @@ translateX(-105%);">
       <p></p><br></br>
     
     <div align="center" class="animated fadeIn delay-1s">
-      <img src="./images/loadingwifi.gif" width="240px" height="150px" />
+      <img src="./images/testingconnectionserver.gif" width="300px" height="190px" />
     </div>
 
       <div align="center" class="animated fadeIn delay-1s">
@@ -173,46 +149,11 @@ translateX(-105%);">
       </div>
     
     <div align="center" class="animated fadeIn delay-2s">
-      <a>Please select your Wi-Fi network</a>
+      <a>Testing internet connection...</a>
     </div>
     
     <div align="center" class="animated fadeIn delay-2s" style="margin-top:100px;">
       
-    <ul class="list" style="max-width:300px;">
-        
-    
-        <!-- LIST WIFI NETWORKS -->
-            <?php
-              $handle = fopen("./python_scripts/logs/scannedWifiSSID.txt", "r");
-              if ($handle) {
-                  $itemcount = 0;
-                  while (($line = fgets($handle)) !== false) {
-                      echo '<li class="list-item list-item--tappable" onclick="enterWifiPass(',$itemcount,')"><div class="list-item__center" id="wifiSSID" name=”wifiSSID”>', $line , '</div></li>';
-                      
-                      echo '<template id="alert-dialog',$itemcount,'.html">';
-                      echo '<ons-alert-dialog id="my-alert-dialog',$itemcount,'" modifier="rowfooter">';
-                      echo '<div class="alert-dialog-title">Enter Password</div>';
-                      echo '<div class="alert-dialog-content">';
-                      echo '<input type="password" id="wifiPASS" value="" />';
-                      echo '</div>';
-                      echo '<div class="alert-dialog-footer">';
-                      echo '<ons-alert-dialog-button onclick="hideAlertDialog(',$itemcount,')">Cancel</ons-alert-dialog-button>';
-                      echo '<ons-alert-dialog-button onclick="connectToWifi(',$itemcount,')">Connect</ons-alert-dialog-button>';
-                      echo '</div>';
-                      echo '</ons-alert-dialog>';
-                      echo '</template>';
-                      $itemcount = $itemcount + 1;
-                  }
-                  fclose($handle);
-                  
-                  
-
-              }
-            ?>
-            
-        </ul>
-    
-    
     
     </div>
     

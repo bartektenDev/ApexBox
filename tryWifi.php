@@ -7,4 +7,7 @@ $file = fopen('triedWifi.txt', 'w') or die("Unable to open file!");
 fwrite($file, $grabbedData1ToTestWifi . $grabbedData2ToTestWifi);
 fclose($file);
 
+header("Location: setup_wifi_2.php");
+
+
 ?>
